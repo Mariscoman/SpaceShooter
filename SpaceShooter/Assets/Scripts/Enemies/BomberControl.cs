@@ -8,10 +8,11 @@ public class BomberScript : MonoBehaviour {
     [SerializeField] GameObject bulletPrefab;
 
     private float _lastShot;
-    private const float _ShootCooldown = 4f;
+    private const float _ShootCooldown = 3f;
     private static readonly Vector3 _InitialRotation = new Vector3(0, 0, 90);
 
     private void Start() {
+        _lastShot = Time.time;
         transform.Rotate(_InitialRotation);
         Rb.linearVelocityX = -Speed;
     }
