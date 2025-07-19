@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,7 +8,7 @@ public class GameManager : MonoBehaviour {
             if (_Instance == null) {
                 _Instance = FindFirstObjectByType<GameManager>();
                 if (_Instance == null) {
-                    instanciarGameManager();
+                    InstanceGameManager();
                 }
             }
             return _Instance;
@@ -17,7 +16,7 @@ public class GameManager : MonoBehaviour {
         private set => Instance = value;
     }
 
-    private static void instanciarGameManager() {
+    private static void InstanceGameManager() {
         GameObject gameManager = new GameObject("GameManager (Auto-Created)");
         _Instance = gameManager.AddComponent<GameManager>();
 

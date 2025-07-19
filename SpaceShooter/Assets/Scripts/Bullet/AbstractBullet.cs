@@ -1,9 +1,9 @@
 using UnityEngine;
 
 public abstract class AbstractBullet : MonoBehaviour {
-    [SerializeField] protected int Damage;
-    [SerializeField] protected float Speed;
-    [SerializeField] protected Rigidbody2D Rb;
+    [SerializeField] protected int _damage;
+    [SerializeField] protected float _speed;
+    [SerializeField] protected Rigidbody2D _rb;
 
     protected abstract void Start();
     protected abstract void OnCollision(Collider2D collision);

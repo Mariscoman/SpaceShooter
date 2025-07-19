@@ -1,19 +1,17 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class BomberScript : MonoBehaviour {
-    [SerializeField] Rigidbody2D Rb;
-    [SerializeField] float Speed;
-    [SerializeField] int ContactDamage;
-    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private float _speed;
+    [SerializeField] private int _contactDamage;
+    [SerializeField] private GameObject _bulletPrefab;
 
     private float _lastShot;
     private const float _ShootCooldown = 3f;
 
     private void Start() {
         _lastShot = Time.time;
-        Rb.linearVelocityX = -Speed;
+        _rb.linearVelocityX = -_speed;
     }
 
     private void Update() {
@@ -23,13 +21,13 @@ public class BomberScript : MonoBehaviour {
 
     private void Shoot() {
         _lastShot = Time.time;
-        Instantiate(bulletPrefab, transform.position + Vector3.left, Quaternion.identity);
+        Instantiate(_bulletPrefab, transform.position + Vector3.left, Quaternion.identity);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         Transform other = collision.transform;
         if (other.CompareTag(GameTags.Player)) {
-            other.GetComponent<Health>().OnDamage(ContactDamage);
+            other.GetComponent<Health>().OnDamage(_contactDamage);
         }
     }
 }

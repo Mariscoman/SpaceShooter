@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class FormationSpawn : MonoBehaviour {
     private const float _Offset = 0.2f;

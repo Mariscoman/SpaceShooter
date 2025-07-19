@@ -2,21 +2,23 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
-    private int _Health;
-    [SerializeField] private int _MaxHealth;
+
+    [SerializeField] private int _maxHealth;
+
+    private int _health;
 
     private void Start() {
-        _Health = _MaxHealth;
+        _health = _maxHealth;
     }
 
     public void OnDamage(int damage) {
-        _Health -= damage;
-        if(_Health <= 0) {
+        _health -= damage;
+        if(_health <= 0) {
             Destroy(gameObject);
         }
     }
 
     public void OnHeal(int heal) {
-        _Health = Mathf.Min(_Health + heal, _MaxHealth);
+        _health = Mathf.Min(_health + heal, _maxHealth);
     }
 }
