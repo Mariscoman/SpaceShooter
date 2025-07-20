@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acdb0089444b60419668d1c695ac1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MaxHealth: 2
+  _maxHealth: 0
 --- !u!114 &2210518113710798414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6736b65ded1431e449c73cad96e3ab06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rb: {fileID: 7953231452172122223}
-  Speed: 1
-  ContactDamage: 3
-  bulletPrefab: {fileID: 1671331217399558178, guid: bba0b4452fa03f84a814c104c0536505, type: 3}
+  _rb: {fileID: 7953231452172122223}
+  _speed: 2
+  _contactDamage: 3
+  _bulletPrefab: {fileID: 1671331217399558178, guid: bba0b4452fa03f84a814c104c0536505, type: 3}
