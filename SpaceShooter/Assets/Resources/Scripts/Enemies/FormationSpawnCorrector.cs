@@ -12,13 +12,9 @@ public class FormationSpawn : MonoBehaviour {
         Vector2 position = transform.position;
 
         if (position.y + heightOffset > bounds) {
-            Debug.Log(transform.position);
             position.y -= heightOffset;
-            Debug.Log(position);
         } else if (position.y - heightOffset < -bounds) {
-            Debug.Log(transform.position);
             position.y += heightOffset;
-            Debug.Log(position);
         }
 
         transform.position = position;

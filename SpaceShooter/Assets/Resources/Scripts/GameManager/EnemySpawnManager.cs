@@ -12,7 +12,7 @@ public class EnemySpawnManager : MonoBehaviour {
 
     private void Start() {
         _lastSpawn = Time.time - _cooldown + 1;
-        //Instantiate(_formations[Random.Range(0, _formations.Count)], new Vector3(3, -5, 0), Quaternion.identity);
+        Instantiate(_formations[Random.Range(0, _formations.Count)], new Vector3(3, -5, 0), Quaternion.identity);
     }
 
     private void Update() {

@@ -6,15 +6,15 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private Rigidbody2D _rb;
 
     private float _vertical;
-    private const float _MovementAcceleration = 35f;
-    private const float _MaxSpeed = 7f;
+    [SerializeField] private float _MovementAcceleration = 35f;
+    [SerializeField] private float _MaxSpeed = 7f;
 
     private float _yAxisBound;
-    private const float _Offset = 0.2f;
+    [SerializeField] private float _Offset;
 
     private void Start() {
         Vector2 screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        float spriteHeightOffset = GetComponent<SpriteRenderer>().bounds.size.y/2 + _Offset;
+        float spriteHeightOffset = GetComponent<SpriteRenderer>().bounds.size.y/2 - _Offset;
 
         _yAxisBound = screenBounds.y - spriteHeightOffset;
     }

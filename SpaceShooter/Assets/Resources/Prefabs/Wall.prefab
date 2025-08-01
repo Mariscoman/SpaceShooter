@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1054116354484251457}
   - component: {fileID: 1468490820157953206}
   m_Layer: 0
-  m_Name: BoundWall
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -95,7 +95,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6847b8288202c4b4d81a7868cf22159b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
