@@ -23,10 +23,14 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameManager);
     }
 
+
+    public static GameObject ExplosionParticleSystem { get; private set; }
+
     private void Awake() {
         if (Instance == null) {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        ExplosionParticleSystem = GameObject.Find("ExplosionParticleSystem");
     }
 }

@@ -21,7 +21,7 @@ public class BomberScript : MonoBehaviour {
 
     private void Shoot() {
         _lastShot = Time.time;
-        BulletInstantiator.InstantiateBomberBullet(transform);
+        BulletInstantiator.InstantiateBomberBullet(transform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

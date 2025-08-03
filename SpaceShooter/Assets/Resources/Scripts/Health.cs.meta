@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 6acdb0089444b60419668d1c695ac1e6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _shader: {fileID: -6465566751694194690, guid: aeba9208e7d55ba479b662d81c4b1078, type: 3}
+  - _spriteRenderer: {instanceID: 0}
+  - _ExplosionParticleSystem: {fileID: 8804493312011823773, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
