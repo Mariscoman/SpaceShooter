@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1573836501542972445}
   - component: {fileID: 6218913608470584450}
   - component: {fileID: 7448204517357583801}
+  - component: {fileID: 3378776310425113575}
   m_Layer: 0
   m_Name: DroneBluePrefab
   m_TagString: Untagged
@@ -170,7 +171,8 @@ MonoBehaviour:
   _rb: {fileID: 2111150049641554073}
   _speed: 6
   _rotateSpeed: 3
-  _maxHomingTimer: 2.75
+  _lifeTime: 5
+  _deathHandler: {fileID: 3378776310425113575}
 --- !u!114 &7448204517357583801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +188,15 @@ MonoBehaviour:
   _maxHealth: 5
   _shader: {fileID: -6465566751694194690, guid: aeba9208e7d55ba479b662d81c4b1078, type: 3}
   _spriteRenderer: {fileID: 5896762477035097575}
+--- !u!114 &3378776310425113575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066849485183784560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0e6998ad1c8914589a024141578555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

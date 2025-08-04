@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1b8806c7971a0429c0e2e4c76676b0, type: 3}
+  m_Name: PrefabCollection
+  m_EditorClassIdentifier: 
+  PlayerBullet: {fileID: 1671331217399558178, guid: 03c7e2864bcd3154296edbf4dcb33cda, type: 3}
+  BomberBullet: {fileID: 1671331217399558178, guid: bba0b4452fa03f84a814c104c0536505, type: 3}
+  DamagingExplosion: {fileID: 8804493312011823773, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
+  VisualExplosion: {fileID: 8804493312011823773, guid: a2ffac01a32d77c4b991cc78da18605e, type: 3}

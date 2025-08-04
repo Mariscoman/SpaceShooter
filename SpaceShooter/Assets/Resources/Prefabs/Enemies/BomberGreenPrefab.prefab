@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6344996299681107453}
   - component: {fileID: 9046127099541401333}
   - component: {fileID: 2210518113710798414}
+  - component: {fileID: -3404529299349605226}
   m_Layer: 0
   m_Name: BomberGreenPrefab
   m_TagString: Enemy
@@ -169,6 +170,7 @@ MonoBehaviour:
   _maxHealth: 4
   _shader: {fileID: -6465566751694194690, guid: aeba9208e7d55ba479b662d81c4b1078, type: 3}
   _spriteRenderer: {fileID: 1035441843625240857}
+  _deathHandler: {fileID: -3404529299349605226}
 --- !u!114 &2210518113710798414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,5 +185,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 7953231452172122223}
   _speed: 2
-  _contactDamage: 3
   _bulletPrefab: {fileID: 1671331217399558178, guid: bba0b4452fa03f84a814c104c0536505, type: 3}
+  _deathHandler: {fileID: -3404529299349605226}
+--- !u!114 &-3404529299349605226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125967174996742645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a7c8e20f024fe42aeba6baa98a28df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

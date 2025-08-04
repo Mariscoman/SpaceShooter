@@ -7,6 +7,6 @@ public class PlayerShooting : MonoBehaviour {
     public void OnShoot(InputAction.CallbackContext ctx) {
         if (Time.time < _lastShot + _Cooldown) return;
         _lastShot = Time.time;
-        BulletInstantiator.InstantiatePlayerBullet(transform.position);
+        PrefabInstantiator.InstantiatePlayerBullet(transform.position);
     }
 }

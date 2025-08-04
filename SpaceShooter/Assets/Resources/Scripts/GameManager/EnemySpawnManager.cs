@@ -11,6 +11,7 @@ public class EnemySpawnManager : MonoBehaviour {
     private float[] _minMaxYPosition = { -4.4f, 4.4f };
 
     private void Start() {
+        if(!SPAWN) return;
         _lastSpawn = Time.time - _cooldown + 1;
         Instantiate(_formations[Random.Range(0, _formations.Count)], new Vector3(3, -5, 0), Quaternion.identity);
     }

@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 830877468}
   - component: {fileID: 830877474}
   - component: {fileID: 830877475}
+  - component: {fileID: 830877476}
   - component: {fileID: 830877473}
   m_Layer: 0
   m_Name: Player
@@ -602,7 +603,18 @@ MonoBehaviour:
   _maxHealth: 100
   _shader: {fileID: -6465566751694194690, guid: aeba9208e7d55ba479b662d81c4b1078, type: 3}
   _spriteRenderer: {fileID: 830877471}
-  _ExplosionParticleSystem: {fileID: 0}
+--- !u!114 &830877476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830877467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610fb1c0678248c4799f31c0105fd369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &908171771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -803,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4982016431802138371, guid: 9a1fdb2070d519642b183dd73e0fd3a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4982016431802138371, guid: 9a1fdb2070d519642b183dd73e0fd3a8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -844,6 +856,10 @@ PrefabInstance:
     - target: {fileID: 5190560929366622191, guid: 9a1fdb2070d519642b183dd73e0fd3a8, type: 3}
       propertyPath: m_Name
       value: EnemyWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190560929366622191, guid: 9a1fdb2070d519642b183dd73e0fd3a8, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -928,63 +944,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: -8435245712485981826, guid: fab23849ed3c57e4daa702b3afd79c20, type: 3}
---- !u!1001 &7113859839206333194
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5718982573096381811, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8804493312011823773, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
-      propertyPath: m_Name
-      value: ExplosionParticleSystem
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -994,4 +953,3 @@ SceneRoots:
   - {fileID: 830877472}
   - {fileID: 932604786}
   - {fileID: 1476262024}
-  - {fileID: 7113859839206333194}
