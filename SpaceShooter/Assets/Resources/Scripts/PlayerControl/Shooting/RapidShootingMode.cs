@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class RapidShooting : IShootingMode {
+public class RapidShootingMode : IShootingMode {
     public float Duration => 7f;
 
     private static readonly float _Delay = 0.1f;

@@ -10,9 +10,10 @@ public class PlayerShooting : MonoBehaviour {
     private float _lastShot;
     private IShootingMode _currentShootingMode;
 
-    private static readonly IShootingMode _DefaultShooting = new DefaultShooting();
-    private static readonly IShootingMode _DoubleShooting = new DoubleShooting();
-    private static readonly IShootingMode _RapidShooting = new RapidShooting();
+    private static readonly IShootingMode _DefaultShooting = new DefaultShootingMode();
+    private static readonly IShootingMode _DoubleShooting = new DoubleShootingMode();
+    private static readonly IShootingMode _RapidShooting = new RapidShootingMode();
+    private static readonly IShootingMode _DiagonalShooting = new DiagonalShootingMode();
 
     private void Awake() {
         _lastShot = 0;
@@ -25,7 +26,7 @@ public class PlayerShooting : MonoBehaviour {
         _currentShootingMode.Shoot(transform.position, this);
     }
 
-    public void SetDefaultShootingMode() {
+    private void SetDefaultShootingMode() {
         _currentShootingMode = _DefaultShooting;
     }
 
@@ -39,6 +40,12 @@ public class PlayerShooting : MonoBehaviour {
         StopAllCoroutines();
         _currentShootingMode = _RapidShooting;
         StartCoroutine(PowerUpTimer(_RapidShooting.Duration));
+    }
+
+    public void SetDiagonalShootingMode() {
+        StopAllCoroutines();
+        _currentShootingMode = _DiagonalShooting;
+        StartCoroutine(PowerUpTimer(_DiagonalShooting.Duration));
     }
 
     private IEnumerator PowerUpTimer(float duration) {

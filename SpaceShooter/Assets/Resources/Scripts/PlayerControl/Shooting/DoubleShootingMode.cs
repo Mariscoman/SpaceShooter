@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoubleShooting : IShootingMode {
+public class DoubleShootingMode : IShootingMode {
     public float Duration => 10f;
 
     private static readonly Vector3 _VerticalOffset = new Vector3(0, 0.1f, 0);

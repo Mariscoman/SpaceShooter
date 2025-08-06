@@ -6,7 +6,7 @@ public class PlayerBullet : AbstractBullet {
     private static readonly Vector3 Direction = new Vector3(0, 0, 270);
 
     protected override void Start() {
-        _rb.linearVelocity = Vector2.right * _speed;
+        _rb.linearVelocity = transform.rotation * Vector2.right * _speed;
         transform.Rotate(Direction);
     }
 
