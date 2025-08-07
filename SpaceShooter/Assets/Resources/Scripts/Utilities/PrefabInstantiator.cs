@@ -35,4 +35,8 @@ public static class PrefabInstantiator {
     public static void InstantiateVisualExplosion(Vector3 position) {
         Object.Instantiate(_prefabs.VisualExplosion, position, Quaternion.identity);
     }
+
+    public static void InstantiateRandomPowerUp(Vector3 position) {
+        Object.Instantiate(_prefabs.PowerUps[Random.Range(0, _prefabs.PowerUps.Length)], position, Quaternion.identity);
+    }
 }

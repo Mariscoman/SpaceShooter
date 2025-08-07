@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class DroneDeathHandler : DeathHandler {
 
@@ -8,8 +7,8 @@ public class DroneDeathHandler : DeathHandler {
 
     private void Awake() {
         _deathActions = new Dictionary<DeathCause, Action>() {
-            { DeathCause.Health0, SpawnMovingPowerUpAndVisualExplosion },
-            { DeathCause.LifeTimeFinished, SpawnStaticPowerUpAndDamagingExplosion },
+            { DeathCause.Health0, SpawnPowerUpAndVisualExplosion },
+            { DeathCause.LifeTimeFinished, SpawnPowerUpAndDamagingExplosion },
             { DeathCause.Collision, SpawnVisualExplosion }
         };
     }
@@ -20,15 +19,13 @@ public class DroneDeathHandler : DeathHandler {
         }
     }
 
-    private void SpawnMovingPowerUpAndVisualExplosion() {
+    private void SpawnPowerUpAndVisualExplosion() {
+        SpawnPowerUp();
         SpawnVisualExplosion();
     }
 
-    private void SpawnStaticPowerUpAndDamagingExplosion() {
-        PrefabInstantiator.InstantiateDamagingExplosion(transform.position);
-    }
-
-    private void SpawnVisualExplosion() {
-        PrefabInstantiator.InstantiateVisualExplosion(transform.position);
+    private void SpawnPowerUpAndDamagingExplosion() {
+        SpawnPowerUp();
+        SpawnVisualExplosion();
     }
 }

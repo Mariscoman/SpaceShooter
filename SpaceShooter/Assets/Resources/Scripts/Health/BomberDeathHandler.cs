@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using UnityEngine;
 
 public class BomberDeathHandler : DeathHandler {
 
@@ -18,17 +16,5 @@ public class BomberDeathHandler : DeathHandler {
         if (_deathActions.TryGetValue(reason, out var action)) {
             action();
         }
-    }
-
-    private void SpawnDamagingExplosion() {
-        PrefabInstantiator.InstantiateDamagingExplosion(transform.position);
-    }
-
-    private void SpawnPowerUp() {
-        SpawnVisualExplosion();
-    }
-
-    private void SpawnVisualExplosion() {
-        PrefabInstantiator.InstantiateVisualExplosion(transform.position);
     }
 }

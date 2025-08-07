@@ -16,3 +16,7 @@ MonoBehaviour:
   BomberBullet: {fileID: 1671331217399558178, guid: bba0b4452fa03f84a814c104c0536505, type: 3}
   DamagingExplosion: {fileID: 8804493312011823773, guid: ce2ee813fbf4e3b4393d70083368a64b, type: 3}
   VisualExplosion: {fileID: 8804493312011823773, guid: a2ffac01a32d77c4b991cc78da18605e, type: 3}
+  PowerUps:
+  - {fileID: 2844536087056619009, guid: af9e02953b8bcac43a9ae1525ac7fada, type: 3}
+  - {fileID: 2844536087056619009, guid: fb593ac2dcace564186735299a6e68bf, type: 3}
+  - {fileID: 2844536087056619009, guid: 8344d3e85db268d4a80892b8a599e98d, type: 3}

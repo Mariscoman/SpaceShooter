@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -26,7 +25,7 @@ public class PlayerShooting : MonoBehaviour {
         _currentShootingMode.Shoot(transform.position, this);
     }
 
-    private void SetDefaultShootingMode() {
+    public void SetDefaultShootingMode() {
         _currentShootingMode = _DefaultShooting;
     }
 

@@ -1,26 +1,45 @@
 using System.Collections.Generic;
+using Unity.Mathematics.Random;
 using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour {
 
     [SerializeField] private bool SPAWN;
     [SerializeField] private float _cooldown;
-    [SerializeField] private List<GameObject> _formations;
+    [SerializeField] private 
 
-    private float _lastSpawn;
-    private float[] _minMaxYPosition = { -4.4f, 4.4f };
+    private float _yBomberBound;
+    private float _yDroneBound;
 
     private void Start() {
-        if(!SPAWN) return;
-        _lastSpawn = Time.time - _cooldown + 1;
-        Instantiate(_formations[Random.Range(0, _formations.Count)], new Vector3(3, -5, 0), Quaternion.identity);
+        if (!SPAWN) return;
+        Vector2 screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        PrefabCollection prefabs = Resources.Load<PrefabCollection>("ScriptableObjects/PrefabCollection");
+
+        float spriteHeightOffset = prefabs.BomberEnemy.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        _yBomberBound = screenBounds.y - spriteHeightOffset;
+
+        spriteHeightOffset = prefabs.DroneEnemy.GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        _yDroneBound = screenBounds.y - spriteHeightOffset;
     }
 
     private void Update() {
         if (!SPAWN) return;
-        if (Time.time < _lastSpawn + _cooldown) return;
-        _lastSpawn = Time.time;
-        Vector3 position = new Vector3(3f, Random.Range(_minMaxYPosition[0], _minMaxYPosition[1]), 0);
-        Instantiate(_formations[Random.Range(0, _formations.Count)], position, Quaternion.identity);
+    }
+
+    private void Spawn3BomberFormation() {
+        
+    }
+    private void Spawn3SeparateBomberFormation() {
+
+    }
+    private void SpawnBomber() {
+
+    }
+    private void Spawn2SeparateDrones() {
+
+    }
+    private void SpawnDrone() {
+
     }
 }
