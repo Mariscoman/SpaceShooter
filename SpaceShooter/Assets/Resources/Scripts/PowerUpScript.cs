@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PowerUpScript : MonoBehaviour {
@@ -52,8 +50,8 @@ public class PowerUpScript : MonoBehaviour {
         Transform other = collision.transform;
         if(other.CompareTag(GameTags.Player)) {
             ApplyPowerUp(other.GetComponent<PlayerShooting>());
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 
     private enum PowerUpType {

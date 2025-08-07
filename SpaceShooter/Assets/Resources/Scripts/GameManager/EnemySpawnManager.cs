@@ -1,12 +1,10 @@
 using System.Collections.Generic;
-using Unity.Mathematics.Random;
 using UnityEngine;
 
 public class EnemySpawnManager : MonoBehaviour {
 
     [SerializeField] private bool SPAWN;
     [SerializeField] private float _cooldown;
-    [SerializeField] private 
 
     private float _yBomberBound;
     private float _yDroneBound;
