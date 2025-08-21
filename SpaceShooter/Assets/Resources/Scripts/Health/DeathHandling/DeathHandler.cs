@@ -9,10 +9,6 @@ public abstract class DeathHandler : MonoBehaviour {
 
     protected abstract void OnDie(DeathCause reason);
 
-    protected void SpawnPowerUp() {
-        PrefabInstantiator.InstantiateRandomPowerUp(transform.position);
-    }
-
     protected void SpawnVisualExplosion() {
         PrefabInstantiator.InstantiateVisualExplosion(transform.position);
     }

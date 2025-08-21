@@ -12,7 +12,7 @@ public class PlayerBullet : AbstractBullet {
 
     protected override void OnCollision(Collider2D collision) {
         Transform other = collision.transform;
-        if (!other.CompareTag(GameTags.Player)) {
+        if (other.CompareTag(GameTags.Enemy)) {
             other.GetComponent<Health>().OnDamage(_damage);
             Destroy(gameObject);
         }

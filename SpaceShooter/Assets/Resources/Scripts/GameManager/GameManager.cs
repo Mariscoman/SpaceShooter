@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameManager);
     }
 
+    public const float CameraBorderOffset = 0.5f;
+
     private void Awake() {
         if (Instance == null) {
             Instance = this;

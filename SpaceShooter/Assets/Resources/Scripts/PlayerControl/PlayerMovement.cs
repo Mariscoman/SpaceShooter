@@ -9,11 +9,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private float _vertical;
     private float _yAxisBound;
-    private const float _Offset = 0.5f;
 
     private void Start() {
         Vector2 screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        float spriteHeightOffset = GetComponent<SpriteRenderer>().bounds.size.y/2 - _Offset;
+        float spriteHeightOffset = GetComponent<SpriteRenderer>().bounds.size.y/2 - GameManager.CameraBorderOffset;
 
         _yAxisBound = screenBounds.y - spriteHeightOffset;
     }

@@ -10,25 +10,7 @@ public class PowerUpScript : MonoBehaviour {
     private float _yAxisBound;
     private const float _Offset = 0.5f;
 
-    private void ApplyPowerUp(PlayerShooting shootingSystem) { 
-        switch(_type) {
-            case PowerUpType.DoubleShooting:
-                shootingSystem.SetDoubleShootingMode();
-                break;
-            case PowerUpType.RapidShooting:
-                shootingSystem.SetRapidShootingMode();
-                break;
-            case PowerUpType.DiagonalShooting:
-                shootingSystem.SetDiagonalShootingMode();
-                break;
-            default:
-                shootingSystem.SetDefaultShootingMode();
-                break;
-        }
-    }
-
     private void Start() {
-        /* The power up moves to the left, I negate the speed here for inspector simplicity */
         _horizontalSpeed = -_horizontalSpeed;
 
         _rb.linearVelocity = new Vector2(_horizontalSpeed, _verticalSpeed);
@@ -41,7 +23,6 @@ public class PowerUpScript : MonoBehaviour {
         if ((transform.position.y <= -_yAxisBound) ||
             (transform.position.y >= _yAxisBound)) {
             _rb.linearVelocity = new Vector2(_horizontalSpeed, -_rb.linearVelocity.y);
-            Debug.Log(_rb.linearVelocity);
             return;
         }
     }
@@ -51,10 +32,16 @@ public class PowerUpScript : MonoBehaviour {
         if(other.CompareTag(GameTags.Player)) {
             ApplyPowerUp(other.GetComponent<PlayerShooting>());
             Destroy(gameObject);
+        } else if (collision.CompareTag(GameTags.BulletDestructionWall)) {
+            Destroy(gameObject);
         }
     }
 
-    private enum PowerUpType {
+    private void ApplyPowerUp(PlayerShooting shootingSystem) {
+        shootingSystem.OnPowerUp(_type);
+    }
+
+    public enum PowerUpType {
         DoubleShooting,
         RapidShooting,
         DiagonalShooting

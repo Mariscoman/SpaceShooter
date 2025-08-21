@@ -20,3 +20,5 @@ MonoBehaviour:
   - {fileID: 2844536087056619009, guid: af9e02953b8bcac43a9ae1525ac7fada, type: 3}
   - {fileID: 2844536087056619009, guid: fb593ac2dcace564186735299a6e68bf, type: 3}
   - {fileID: 2844536087056619009, guid: 8344d3e85db268d4a80892b8a599e98d, type: 3}
+  BomberEnemy: {fileID: 1125967174996742645, guid: 0730aa69b6140d24083b206597f4a9ba, type: 3}
+  DroneEnemy: {fileID: 1066849485183784560, guid: af26c1e73569ae447b8443a61ebe86f3, type: 3}

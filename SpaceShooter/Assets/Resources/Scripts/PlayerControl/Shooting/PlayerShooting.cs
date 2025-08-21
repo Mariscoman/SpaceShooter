@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static PowerUpScript;
 
 public class PlayerShooting : MonoBehaviour {
 
@@ -25,23 +26,40 @@ public class PlayerShooting : MonoBehaviour {
         _currentShootingMode.Shoot(transform.position, this);
     }
 
-    public void SetDefaultShootingMode() {
+    public void OnPowerUp(PowerUpScript.PowerUpType powerUp) {
+        switch (powerUp) {
+            case PowerUpType.DoubleShooting:
+                SetDoubleShootingMode();
+                break;
+            case PowerUpType.RapidShooting:
+                SetRapidShootingMode();
+                break;
+            case PowerUpType.DiagonalShooting:
+                SetDiagonalShootingMode();
+                break;
+            default:
+                SetDefaultShootingMode();
+                break;
+        }
+    }
+
+    private void SetDefaultShootingMode() {
         _currentShootingMode = _DefaultShooting;
     }
 
-    public void SetDoubleShootingMode() {
+    private void SetDoubleShootingMode() {
         StopAllCoroutines();
         _currentShootingMode = _DoubleShooting;
         StartCoroutine(PowerUpTimer(_DoubleShooting.Duration));
     }
 
-    public void SetRapidShootingMode() {
+    private void SetRapidShootingMode() {
         StopAllCoroutines();
         _currentShootingMode = _RapidShooting;
         StartCoroutine(PowerUpTimer(_RapidShooting.Duration));
     }
 
-    public void SetDiagonalShootingMode() {
+    private void SetDiagonalShootingMode() {
         StopAllCoroutines();
         _currentShootingMode = _DiagonalShooting;
         StartCoroutine(PowerUpTimer(_DiagonalShooting.Duration));
