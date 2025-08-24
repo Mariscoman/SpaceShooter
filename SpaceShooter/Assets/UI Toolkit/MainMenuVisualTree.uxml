@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=49522c896352bca45a40914399125450&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement name="Container" focusable="false" enabled="true" style="flex-grow: 1; width: 1920px; height: 1080px; background-image: none; -unity-background-scale-mode: stretch-to-fill; background-size: 1920px 1080px; position: relative; align-items: stretch; align-self: center; opacity: 1; background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgba(255, 255, 255, 0);">
+        <ui:Label text="Space Shooter" name="TitleLabel" class="header" style="height: 79px;" />
+        <ui:Button text="start" name="StartButton" class="button" />
+        <ui:Button text="Records" name="RecordButton" class="button" />
+        <ui:Button text="settings" name="SettingsButton" class="button" style="margin-bottom: 300px; margin-left: 0; margin-right: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

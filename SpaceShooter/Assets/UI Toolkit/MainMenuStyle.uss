@@ -1,0 +1,24 @@
+:root {
+}
+
+.header {
+    font-size: 150px;
+    -unity-font-definition: resource('Font/Materials/ThaleahFat_TTF');
+    color: rgb(255, 255, 255);
+    margin-top: 100px;
+    align-self: center;
+    margin-bottom: 300px;
+}
+
+.button {
+    -unity-font-definition: resource('Font/Materials/ThaleahFat_TTF');
+    font-size: 60px;
+    width: 300px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
