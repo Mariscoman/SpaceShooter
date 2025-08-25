@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 4
+  _deathHandler: {fileID: -3404529299349605226}
   _shader: {fileID: -6465566751694194690, guid: aeba9208e7d55ba479b662d81c4b1078, type: 3}
   _spriteRenderer: {fileID: 1035441843625240857}
 --- !u!114 &2210518113710798414
